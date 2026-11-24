@@ -413,4 +413,204 @@ tr_table!(tr_en, {
     "cli.cmd.device.revert" => "Przywróć maskowanie urządzenia",
     "cli.cmd.msix" => "Odinstaluj pakiet MSIX MiDrop Ext (uruchomi ponownie Eksplorator)",
     "cli.cmd.product" => "Pełne odinstalowanie MiPCManager / MiContinuity (program główny + podprodukty + usługi + czyszczenie, nieodwracalne)",
-    
+        // ── CLI 参数帮助 ──
+    "cli.arg.dll" => "Określ ścieżkę docelowego pliku DLL (domyślnie wykrywa katalog instalacji)",
+    "cli.arg.no_kill" => "Nie zamykaj automatycznie powiązanych procesów",
+    "cli.arg.region" => "Kod maskowanego regionu (domyślnie CN)",
+    "cli.arg.no_registry" => "Nie modyfikuj rejestru",
+    "cli.arg.mode" => "Medium rozgłaszania: wifi (bezprzewodowe, domyślne) lub lan (przewodowe)",
+    "cli.arg.dir" => "Określ katalog wersji (domyślnie wykrywany automatycznie)",
+    "cli.arg.no_wifi_route" => "Nie zarządzaj automatycznie trasą podsieci lokalnej Wi-Fi (używane w trybie Wi-Fi dla dwóch kart sieciowych)",
+    "cli.arg.model" => "Kod modelu (domyślnie: pierwsza pozycja w devicelist.yaml)",
+    "cli.arg.installer" => "Jawnie wskaż instalator .exe",
+    "cli.arg.url" => "Pobierz z adresu URL HTTP(S)",
+
+    // ── CLI 运行时消息 ──
+    "cli.error" => "Błąd: {error}",
+    "cli.confirm.uninstall" => "Potwierdzić odinstalowanie? Wpisz y, aby kontynuować: ",
+    "cli.cancelled.uninstall" => "Anulowano odinstalowanie.",
+    "cli.cancelled.install" => "Anulowano instalację.",
+    "cli.downloading" => "Pobieranie instalatora do {path}",
+    "cli.found.installer" => "Znaleziono instalator {kind}: {path}",
+    "cli.found.xiaoai.installer" => "Znaleziono instalator Super XiaoAI: {path}",
+    "cli.multiple.installers" => "Znaleziono wiele instalatorów:",
+    "cli.choose.installer" => "Wybierz instalator: ",
+    "cli.invalid.choice" => "Nieprawidłowy wybór instalatora",
+    "cli.no.installer.found" => "Nie znaleziono instalatora w katalogu Patchera (`*_XiaomiPCManager_*.exe` lub `小米互联*.exe`).",
+    "cli.no.xiaoai.installer.found" => "Nie znaleziono pliku XiaoaiAgent_Setup.exe ani s6bK_XiaoaiAgent_3.5.0.220_31444585.exe w katalogu Patchera.",
+    "cli.cancel.option" => "Anuluj",
+    "cli.choose.option" => "Wybierz: ",
+    "cli.menu.download_url" => "Wpisz adres URL pobierania",
+    "cli.menu.local_file" => "Wskaż lokalny instalator .exe",
+    "cli.prompt.url" => "Wpisz adres URL pobierania HTTP(S): ",
+    "cli.prompt.path" => "Wpisz ścieżkę instalatora .exe: ",
+    "cli.invalid.selection" => "Nieprawidłowy wybór",
+
+    // ── 安装包分类 ──
+    "install.kind.manager" => "MiPCManager (XiaomiPCManager)",
+    "install.kind.continuity" => "MiContinuity / Interconnection (HyperConnect / PcContinuity)",
+
+    // ── 安装 GUI ──
+    "install.title" => "Zainstaluj MiPCManager / MiContinuity",
+    "install.xiaoai.title" => "Zainstaluj Super XiaoAI i wstrzyknij łatkę",
+    "install.xiaoai.note" => "Wdraża userenv.dll po zamknięciu okna instalatora; uruchom ponownie komputer po zakończeniu",
+    "install.download.placeholder" => "Adres URL pobierania HTTP(S)…",
+    "install.file.placeholder" => "Wybierz lokalny instalator .exe…",
+    "install.download.and.install" => "Pobierz i zainstaluj",
+
+    // ── GUI 下载 ──
+    "gui.downloading.start" => "Pobieranie: {url}",
+
+    // ── GUI 安装操作标签 ──
+    "gui.op.locale.apply" => "Maskowanie regionu",
+    "gui.op.locale.revert" => "Maskowanie regionu · Przywróć",
+    "gui.op.device.apply" => "Maskowanie urządzenia({model})",
+    "gui.op.device.revert" => "Maskowanie urządzenia · Przywróć",
+    "gui.op.camera.apply" => "Okno kamery",
+    "gui.op.camera.revert" => "Okno kamery · Przywróć",
+    "gui.op.hotkey.apply" => "Skróty myszy",
+    "gui.op.hotkey.revert" => "Skróty myszy · Przywróć",
+    "gui.op.audio.wifi" => "Audio · WiFi",
+    "gui.op.audio.lan" => "Audio · LAN",
+    "gui.op.audio.revert" => "Audio · Przywróć",
+    "gui.op.uninstall.msix" => "Odinstaluj MSIX",
+    "gui.op.uninstall.product" => "Odinstaluj produkt",
+    "gui.op.install" => "Instaluj({path})",
+    "gui.op.xiaoai.apply" => "Super XiaoAI · Zastosuj",
+    "gui.op.xiaoai.revert" => "Super XiaoAI · Przywróć",
+    "gui.op.xiaoai.install" => "Zainstaluj Super XiaoAI({path})",
+
+    // ── GUI 警告 ──
+    "gui.warn.no_full" => "Nie wykryto pełnej wersji XiaomiPCManager\nMaskowanie kamery / audio / urządzenia jest niedostępne.",
+    "gui.warn.recent_error" => "Ostatni błąd: ",
+
+    // ── GUI 运行日志面板 ──
+    "gui.log.title" => "Log operacji",
+
+    // ── GUI 卸载对话框 ──
+    "gui.uninstall.msix" => "Odinstaluj MiDrop Ext (MSIX)",
+    "gui.uninstall.product" => "Odinstaluj MiPCManager / MiContinuity",
+
+    // ── GUI 文件选择对话框 ──
+    "gui.browse.title" => "Wybierz instalator",
+    "gui.browse.filter" => "Instalator",
+
+    // ── TUI ──
+    "tui.tab.patches" => "Łatki",
+    "tui.tab.install" => "Instaluj",
+    "tui.tab.uninstall" => "Odinstaluj",
+    "tui.tab.log" => "Logi",
+    "tui.header.ready" => "Gotowy",
+    "tui.header.limited" => "Ograniczony",
+    "tui.overlay.confirm" => "Potwierdź",
+    "tui.overlay.input.title" => "Wpisz model — {target}",
+    "tui.overlay.confirm.yn" => "Y, aby potwierdzić / N, aby anulować",
+    "tui.overlay.input.hint" => "Enter, aby potwierdzić / Esc, aby anulować",
+    "tui.shortcuts.global" => "Wyjdź",
+    "tui.shortcuts.tab" => "Zmień panel",
+    "tui.shortcuts.patches" => "Tab Panel  Góra/Dół Wybór  Lewo/Prawo Przycisk  Enter Uruchom  M Model  C Własny  R Odśwież  Q Wyjdź",
+    "tui.shortcuts.install" => "Tab Panel  Enter Zainstaluj lokalne Super XiaoAI  R Odśwież  Q Wyjdź",
+    "tui.shortcuts.uninstall" => "Tab Panel  Góra/Dół Wybór  Enter Uruchom  R Odśwież  Q Wyjdź",
+    "tui.shortcuts.log" => "Tab Panel  Góra/Dół/PgUp/PgDn/Home/End Przewijanie  R Odśwież  Q Wyjdź",
+    "tui.shortcuts.input" => "Enter Potwierdź  Esc Anuluj  Backspace Usuń",
+    "tui.shortcuts.confirm" => "Y Potwierdź  N/Esc Anuluj",
+    "tui.shortcuts.scroll" => "Przewiń",
+    "tui.shortcuts.model.hint" => "m—Zmień preset  c—Własny",
+    "tui.shortcuts.refresh" => "R — Odśwież",
+
+    // ── TUI 标签 ──
+    "tui.model.custom" => "(Własny)",
+    "tui.model.preset" => "Model",
+    "tui.log.start" => "▶ Start: {label}",
+    "tui.log.done" => "✓ Gotowe: {label}",
+    "tui.log.failed" => "{label} nie powiodło się: {error}",
+    "tui.log.cancelled" => "Operacja anulowana",
+    "tui.log.error" => "❌ Błąd: {error}",
+
+    // ── TUI 安装面板 ──
+    "tui.install.title" => "Pobierz z adresu URL lub wskaż lokalny instalator:",
+    "tui.install.desc" => "Automatycznie wykrywa typ instalatora, instaluje we właściwej lokalizacji i czyści pozostałości",
+    "tui.install.hint.focused" => "Naciśnij Enter — zobacz instrukcję instalacji (użyj podpolecenia install w CLI)",
+    "tui.install.hint.unfocused" => "Przełącz na ten panel i naciśnij Enter, aby zobaczyć instrukcję instalacji",
+    "tui.install.hint.cmd1" => "  MiPCM_CLI install --url https://...",
+    "tui.install.hint.cmd2" => "  MiPCM_CLI install --installer XiaomiPCManager.exe",
+    "tui.install.hint.xiaoai1" => "  MiPCM_CLI xiaoai install --url https://...",
+    "tui.install.hint.xiaoai2" => "  MiPCM_CLI xiaoai install --installer XiaoaiAgent_Setup.exe",
+    "tui.install.xiaoai.enter" => "Naciśnij Enter: zainstaluj jedyny pakiet Super XiaoAI obok Patchera i wstrzyknij łatkę",
+
+    // ── TUI 卸载提示 ──
+    "tui.uninstall.msix.desc" => "Odinstaluj pakiet MSIX MiDrop Ext, a następnie uruchom ponownie Eksplorator",
+    "tui.uninstall.product.desc" => "Pełne odinstalowanie MiPCManager / MiContinuity (nieodwracalne, wymaga potwierdzenia)",
+    "tui.uninstall.key.hint" => "  Enter — Uruchom  ",
+
+    // ── TUI 日志面板 ──
+    "tui.log.empty" => "Brak logów — wyniki pojawią się tutaj po wykonaniu operacji",
+    "tui.log.scroll.hint" => "% — Góra/Dół/PgUp/PgDn/Home/End, aby przewijać",
+    "tui.log.count" => "{current}/{total}",
+
+    // ── TUI 输入对话框 ──
+    "tui.input.device" => "Maskowanie urządzenia",
+    "tui.input.title" => " Własny model — {target_label} ",
+
+    // ── TUI 状态 ──
+    "tui.status.loading" => "(Ładowanie…)",
+    "tui.confirm.title" => " ⚠ Potwierdź odinstalowanie ",
+
+    // ── TUI 机型日志 ──
+    "tui.log.model.set" => "Ustawiono model: {model}",
+    "tui.log.model.switch" => "📱 Przełączono model urządzenia na: {code} [{name}]",
+    "tui.log.uninstall.fetch.error" => "✗ Nie udało się pobrać informacji o odinstalowaniu: {error}",
+
+    // ── TUI 操作标签 ──
+    "tui.op.locale.apply" => "Maskowanie regionu · Zastosuj",
+    "tui.op.locale.revert" => "Maskowanie regionu · Przywróć",
+    "tui.op.camera.apply" => "Okno kamery · Zastosuj",
+    "tui.op.camera.revert" => "Okno kamery · Przywróć",
+    "tui.op.hotkey.apply" => "Skróty myszy · Zastosuj",
+    "tui.op.hotkey.revert" => "Skróty myszy · Przywróć",
+    "tui.op.audio.wifi" => "Strumień audio · WiFi",
+    "tui.op.audio.lan" => "Strumień audio · LAN",
+    "tui.op.audio.revert" => "Strumień audio · Przywróć",
+    "tui.op.device.apply" => "Maskowanie urządzenia · Zastosuj({model})",
+    "tui.op.device.revert" => "Maskowanie urządzenia · Przywróć",
+    "tui.op.xiaoai.apply" => "Super XiaoAI · Zastosuj",
+    "tui.op.xiaoai.revert" => "Super XiaoAI · Przywróć",
+    "tui.op.xiaoai.install" => "Super XiaoAI · Zainstaluj i wstrzyknij",
+    "tui.op.uninstall.msix" => "Odinstaluj MiDrop Ext (MSIX)",
+    "tui.op.uninstall.product" => "Odinstaluj MiPCManager / MiContinuity",
+
+    // ── 卸载模块 ──
+    "uninstall.start.manager" => "Rozpoczynanie odinstalowywania MiPCManager: {root}",
+    "uninstall.start.continuity" => "Rozpoczynanie odinstalowywania MiContinuity / PcContinuity: {root}",
+    "uninstall.running.uninstaller" => "  Uruchamianie deinstalatora: {exe}",
+    "uninstall.remover.not.removed" => "  ⚠ Deinstalator nie usunął samego siebie, odinstalowanie może być niekompletne: {exe}",
+    "uninstall.main.done" => "  ✓ Zakończono odinstalowywanie głównego programu",
+    "uninstall.removing.services" => "  Usuwanie usług…",
+    "uninstall.service.removed" => "    ✓ Usunięto usługę: {name}",
+    "uninstall.service.failed" => "    ⚠ Nie udało się usunąć usługi {name}: {error}",
+    "uninstall.cleaning.files" => "  Czyszczenie plików…",
+    "uninstall.done.manager" => "✓ Zakończono odinstalowywanie MiPCManager",
+    "uninstall.done.continuity" => "✓ Zakończono odinstalowywanie MiContinuity / PcContinuity",
+        "uninstall.sub.not.installed" => "  - {label} nie jest zainstalowany, pominięto",
+    "uninstall.sub.uninstalling" => "  Odinstalowywanie {label}: {exe}",
+    "uninstall.sub.done" => "    ✓ Zakończono odinstalowywanie {label}",
+    "uninstall.sub.not.removed" => "    ⚠ Deinstalator {label} nie usunął samego siebie, odinstalowanie może być niekompletne",
+    "uninstall.sub.failed" => "    ⚠ Odinstalowywanie {label} nie powiodło się: {error}",
+    "uninstall.sub.no.uninstaller" => "    ⚠ Katalog {label} istnieje, ale nie znaleziono pliku uninstall.exe",
+    "uninstall.sub.no.version" => "    ⚠ Katalog {label} istnieje, ale brak podkatalogu wersji",
+    "uninstall.clean.programdata" => "    ✓ Usunięto C:\\ProgramData\\MI",
+    "uninstall.clean.programdata.failed" => "    ⚠ Nie udało się wyczyścić C:\\ProgramData\\MI: {error}",
+    "uninstall.clean.dir" => "    ✓ Usunięto {path}",
+    "uninstall.clean.dir.failed" => "    ⚠ Nie udało się wyczyścić {path}: {error}",
+    "uninstall.desc.manager" => "Zostanie odinstalowany program MiPCManager\n\nKatalog instalacji: {root}\nZawiera: aplikację główną, AIService, MiService\nWszystkie usługi i pliki tymczasowe zostaną usunięte\n\nTa operacja jest nieodwracalna!",
+    "uninstall.desc.continuity" => "Zostanie odinstalowany program MiContinuity / PcContinuity\n\nKatalog instalacji: {root}\nWszystkie usługi i pliki tymczasowe zostaną usunięte\n\nTa operacja jest nieodwracalna!",
+    "uninstall.desc.coexistence" => "Wykryto jednocześnie MiPCManager oraz MiContinuity.\nObecnie jednoczesna instalacja nie jest obsługiwana. Najpierw odinstaluj jeden z programów.",
+    "uninstall.desc.none" => "Nie wykryto zainstalowanego programu MiPCManager ani MiContinuity",
+    "uninstall.no.msix" => "Nie wykryto pakietu MSIX MiDrop Ext",
+    "uninstall.msix.done" => "✓ Odinstalowano pakiet MSIX MiDrop Ext: {pkg}",
+    "uninstall.explorer.restarted" => "✓ Uruchomiono ponownie Eksplorator",
+
+    // ── Ops 模块 ──
+    "ops.restart.hint" => "Wskazówka: Łatki zostały zastosowane. Uruchom ponownie MiPCManager ręcznie, aby zmiany weszły w życie.",
+});
+
